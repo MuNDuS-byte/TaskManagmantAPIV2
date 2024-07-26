@@ -4,20 +4,56 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Task Managmant Api</title>
+        <style>
+            body {
+                text-align: center;
+            }
+          h1 {
+            font-size: 64px;
+          }
+       
+           form {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            div {
+                margin-bottom: 30px;
+            }
+            label, a {
+                font-size: 20px;
+            }
+            a {
+                color: rgb(126, 201, 126);
+                text-decoration: none;
+            }
+            button {
+                padding: 10px 25px;
+                border-radius: 3px;
+                border: none;
+                background-color: rgb(126, 201, 126);
+            }
+        </style>
     </head>
     <body>
         <h1>Task managmant</h1>
         <form action="/tasks" method="post">
-            <label for="text">Tasks name:</label>
-            <input name="text" id="text" ></input>
-            <label for="text"> descriptions:</label>
-            <input
-                name="descriptions"
-                id="descriptions"
-                cols="30"
-                rows="10"
-            ></input>
+            <div>
+
+                <label for="text">Tasks name:</label>
+                <input name="text" id="text" ></input>
+            </div>
+            <div>
+
+                <label for="text"> descriptions:</label>
+                <input
+                    name="descriptions"
+                    id="descriptions"
+                    cols="30"
+                    rows="10"
+                ></input>
+            </div>
             <button type="submit">Submit</button>
         </form>
+        <a href="/tasks" class="href">Watch all tasks</a>
     </body>
 </html>
