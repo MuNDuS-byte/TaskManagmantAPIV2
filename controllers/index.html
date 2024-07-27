@@ -8,18 +8,19 @@
             body {
                 text-align: center;
             }
-          h1 {
-            font-size: 64px;
-          }
-       
-           form {
+            h1 {
+                font-size: 64px;
+            }
+
+            form {
                 margin-top: 20px;
                 margin-bottom: 20px;
             }
             div {
                 margin-bottom: 30px;
             }
-            label, a {
+            label,
+            a {
                 font-size: 20px;
             }
             a {
@@ -38,27 +39,48 @@
         <h1>Task managmant</h1>
         <form action="/tasks" method="post">
             <div>
-
                 <label for="text">Tasks name:</label>
-                <input name="text" id="text" ></input>
+                <input name="text" id="text" />
             </div>
             <div>
-
-                <label for="text"> descriptions:</label>
+                <label for="text">descriptions:</label>
                 <input
                     name="descriptions"
                     id="descriptions"
                     cols="30"
                     rows="10"
-                ></input>
+                />
             </div>
             <button type="submit">Submit</button>
         </form>
 
         <form action="/tasks/delete" method="post">
-        <label for="number">Id:</label>
-        <input name="id" id="id" type="number"/>
+            <label for="number">Id:</label>
+            <input name="id" id="id" type="number" />
             <button type="submit">Delete</button>
+        </form>
+
+        <form action="/tasks/put" method="post">
+            <div>
+                <label for="number">Id:</label>
+                <input name="id" id="id" type="number" />
+            </div>
+
+            <div>
+                <label for="number">Change Name:</label>
+                <input name="text" id="text" />
+            </div>
+            <div>
+                <label for="number">Change descriptions:</label>
+                <input
+                    name="descriptions"
+                    id="descriptions"
+                    cols="30"
+                    rows="10"
+                />
+            </div>
+
+            <button type="submit">Will change</button>
         </form>
         <a href="/tasks" class="href">Watch all tasks</a>
     </body>

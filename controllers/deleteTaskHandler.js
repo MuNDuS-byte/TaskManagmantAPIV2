@@ -14,7 +14,7 @@ function deleteTaskHandler(req, res) {
             });
         } else {
             res.send(
-                '<h1>No such task with this id.</h1><a href="/">One more</a>'
+                '<h1>No such task with this id.</h1><a href="/">Try again</a>'
             );
         }
     });
