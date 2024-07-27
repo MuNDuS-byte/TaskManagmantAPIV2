@@ -4,8 +4,11 @@ let tasks = [];
 
 function postTasksHandler(req, res) {
     fs.readFile('./data/data.txt', (err, data) => {
+        const stat = fs.statSync('./data/data.txt');
         if (err) console.log(err);
-        tasks = JSON.parse(data);
+        if (stat > 0) {
+            tasks = JSON.parse(data);
+        }
         tasks.push({ id: tasks.length + 1, ...req.body });
         fs.writeFile(
             './data/data.txt',
