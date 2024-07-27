@@ -7,7 +7,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 const router = express.Router();
 
-router.post('/', urlencodedParser, postTasksHandler);
 router.get('/', getTasksHandler);
+router.post('/', urlencodedParser, postTasksHandler);
 
 module.exports = router;

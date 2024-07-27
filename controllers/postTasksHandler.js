@@ -15,8 +15,8 @@ function postTasksHandler(req, res) {
                 if (err) console.log(err);
             }
         );
+        res.send('<h1>Task was added.</h1><a href="/">One more</a>');
     });
-    res.send('<h1>Task was added.</h1><a href="/">One more</a>');
 }
 
 module.exports = postTasksHandler;
